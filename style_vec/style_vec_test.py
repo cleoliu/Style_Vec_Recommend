@@ -1,7 +1,3 @@
-"""
-https://blog.csdn.net/churximi/article/details/51472203
-重來:保留text8即可
-"""
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import warnings
@@ -26,7 +22,7 @@ class Test:
 
 
     def test_20relation(self, first):
-        '''b.计算某个词的相关词列表'''
+        '''b.計算某個詞的相關詞列表'''
         y2 = self.model.most_similar(first, topn=20)  # 20个最相关的
         print (u"%s similarity word：\n" %(first))
         item_list = [first+".jpg"]
@@ -38,7 +34,7 @@ class Test:
 
 
     def test_2similarity(self, first, second):
-        '''c.计算两个词的相似度/相关程度
+        '''c.計算兩個詞的相似度/相關程度
         woman & man similarity： 0.985365249752'''
         y1 = self.model.similarity(first, second)
         print ("%s & %s similarity：%s" %(first, second, y1))
@@ -46,7 +42,7 @@ class Test:
 
 
     def test_Correspondence(self, first, second, third): 
-        '''d.寻找对应关系
+        '''d.尋找對應關係
         "boy" is to "father" as "girl" is to ...?'''
         print (' "%s" is to "%s" as "%s" is to ...? \n' %(first, second, third))
         y3 = self.model.most_similar([third, second], [first], topn=3)
@@ -64,7 +60,7 @@ class Test:
 
 
     def test_doesnt_match(self, string):
-        '''e.寻找不合群的词'''
+        '''e.尋找不合群的詞'''
         y4 = self.model.doesnt_match(string.split())
         print (u"Not gregarious：", y4)
         print ("--------\n")
@@ -79,7 +75,7 @@ if __name__ == "__main__":
     text_name ="m_adam_300_1"
     test_model = Test(text_name=text_name)
     test_model.test_word_vec(word='1276241')                                           # a.印出詞向量  
-    test_model.test_20relation(first='3224010')                                        # b.20个最相关的
-    test_model.test_2similarity(first='1891321', second='1673639')                     # c.计算两个词的相似度/相关程度
-    test_model.test_Correspondence(first='3002138', second='1944321', third='2687488') # d.寻找对应关系
-    test_model.test_doesnt_match(string='breakfast cereal dinner lunch')               # e.寻找不合群的词
+    test_model.test_20relation(first='3224010')                                        # b.20個最相關的
+    test_model.test_2similarity(first='1891321', second='1673639')                     # c.計算兩個詞的相似度/相關程度
+    test_model.test_Correspondence(first='3002138', second='1944321', third='2687488') # d.尋找對應關係
+    test_model.test_doesnt_match(string='breakfast cereal dinner lunch')               # e.尋找不合群的詞

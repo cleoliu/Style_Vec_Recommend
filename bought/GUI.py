@@ -1,5 +1,4 @@
 '''
-https://blog.csdn.net/sm9sun/article/details/53743116
 3. GUI
     input:
         1.受訪者從 {50} 個商品中選擇欲搭配商品 = **i
@@ -95,7 +94,7 @@ def fun():
 if __name__ == '__main__':
     #window
     root=Tk()  #實例化出一個父窗口
-    root.title('Style vector recommendation')  #窗口标题  
+    root.title('Style vector recommendation')  #窗口標題  
     root.geometry('+600+100') #geometry('290x160+10+10'):290 160為窗口大小，+10 +10 定義窗口彈出時的默認展示位置  
 
     #image(0,0)

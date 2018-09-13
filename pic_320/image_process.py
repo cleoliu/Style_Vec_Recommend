@@ -21,8 +21,8 @@ def pic_320():
             print ("Loading: %s" %(filename))
             img2 = Image.new('RGB', (320, 320), (255,255,255))                #建一个白底圖
             box1 = (0, 0, img1.size[0]-1, img1.size[1]-1)                     #選取input的圖片
-            region = img1.crop(box1)                                          #复制input图片
-            img2.paste(region, ((320-img1.size[0])/2, (320-img1.size[1])/2))  #粘贴图片(置中)
+            region = img1.crop(box1)                                          #複製input圖片
+            img2.paste(region, ((320-img1.size[0])/2, (320-img1.size[1])/2))  #粘貼圖片(置中)
             img2.save(os.path.join(DATA_DIR, filename))
 
 def random_photo_join(item_list=None, save_name=None):
@@ -41,11 +41,11 @@ def random_photo_join(item_list=None, save_name=None):
     width, height = ims[0].size
     # 新建底圖,'RGBA'=png透明底圖
     result = Image.new('RGBA',(width*10, height*5))
-    # 设置浮水印字体,尺寸(查字體執行輸入:%windir%\fonts)
+    # 設置浮水印字體,尺寸(查字體執行輸入:%windir%\fonts)
     font = ImageFont.truetype('ahronbd.ttf',size=70)
     
     for i, im in enumerate(ims):
-        # 在图片上添加文字
+        # 在圖片上添加文字
         draw = ImageDraw.Draw(im)
         draw.text((0, 0),str(i),(16,78,139),font=font)
         draw = ImageDraw.Draw(im)

@@ -78,7 +78,7 @@ if __name__ == "__main__":
 	model = VGG_16()
 	#sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 
-	model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy']) #categorical_crossentropy:转化成one-hot 向量
+	model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy']) #categorical_crossentropy:轉化成one-hot 向量
 
 	# file
 	for f in files:
@@ -106,9 +106,3 @@ if __name__ == "__main__":
 	#(1,1,1,1024)
 	print(features.shape) 
 
-	
-	
-
-
-#http://msrc.cm.nsysu.edu.tw/ezfiles/135/1135/img/2968/VGG16.html
-#https://github.com/f496328mm/cifar10_vgg16_kaggle

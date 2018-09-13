@@ -1,6 +1,3 @@
-'''
-Pipe https://blog.csdn.net/CityzenOldwang/article/details/78584175
-'''
 import sys
 import os.path
 root_path = (os.path.abspath('../')) #STYLE2VEC

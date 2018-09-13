@@ -1,6 +1,5 @@
 '''
 tsne & tensorboard
-https://github.com/priya-dwivedi/Deep-Learning/blob/master/word2vec_skipgram/Skip-Grams-Solution.ipynb
 '''
 # -*- coding: utf-8 -*-
 import warnings
